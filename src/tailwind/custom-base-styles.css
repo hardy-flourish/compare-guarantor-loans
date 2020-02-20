@@ -1,0 +1,98 @@
+/* custom-base-styles */
+
+h1 {
+  @apply text-5xl leading-none;
+  @screen lg {
+    @apply text-6xl leading-none;
+  }
+}
+
+h2 {
+  @apply text-4xl leading-none;
+  @screen lg {
+    @apply text-5xl leading-none;
+  }
+}
+
+h3 {
+  @apply text-3xl leading-none;
+  @screen lg {
+    @apply text-4xl leading-none;
+  }
+}
+
+h4 {
+  @apply text-2xl leading-none;
+  @screen lg {
+    @apply text-3xl leading-none;
+  }
+}
+
+h5 {
+  @apply text-xl leading-none;
+  @screen lg {
+    @apply text-2xl leading-none;
+  }
+}
+h6 {
+  @apply text-lg leading-none;
+  @screen lg {
+    @apply text-xl leading-none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-6 mt-10 font-bold;
+}
+p {
+  @apply mb-6;
+}
+
+a {
+  @apply font-bold;
+}
+
+body {
+  @apply font-raleway;
+}
+
+.content {
+  h1 {
+    @apply text-4xl leading-none;
+    @screen lg {
+      @apply text-5xl leading-none;
+    }
+  }
+
+  h2 {
+    @apply text-3xl leading-none;
+    @screen lg {
+      @apply text-4xl leading-none;
+    }
+  }
+
+  h3 {
+    @apply text-2xl leading-none;
+    @screen lg {
+      @apply text-3xl leading-none;
+    }
+  }
+
+  h4 {
+    @apply text-xl leading-none;
+    @screen lg {
+      @apply text-2xl leading-none;
+    }
+  }
+  h5 {
+    @apply text-lg leading-none;
+    @screen lg {
+      @apply text-xl leading-none;
+    }
+  }
+}

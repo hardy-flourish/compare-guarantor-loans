@@ -1,0 +1,23 @@
+/* custom-components */
+.container {
+  @apply mx-auto px-6;
+}
+
+.row {
+  @apply flex flex-wrap -mx-4;
+  &.collapsed {
+    @apply mx-0;
+    .col {
+      @apply px-0;
+    }
+  }
+  &.small {
+    @apply -mx-2;
+    .col {
+      @apply px-2;
+    }
+  }
+  .col {
+    @apply px-4;
+  }
+}

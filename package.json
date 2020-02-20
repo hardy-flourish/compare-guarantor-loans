@@ -1,0 +1,61 @@
+{
+  "name": "gatsby-starter",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Mate Mišlov <matemislov90@gmail.com>",
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "autoprefixer": "^9.7.3",
+    "background-image": "^0.0.1-security",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.19.0",
+    "gatsby-alias-imports": "^1.0.4",
+    "gatsby-background-image": "^0.9.12",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-emotion": "^4.1.18",
+    "gatsby-plugin-manifest": "^2.2.31",
+    "gatsby-plugin-offline": "^3.0.27",
+    "gatsby-plugin-postcss": "^2.1.18",
+    "gatsby-plugin-purgecss": "^4.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-webfonts": "^1.1.2",
+    "gatsby-source-contentful": "^2.1.78",
+    "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-transformer-remark": "^2.6.48",
+    "lodash.get": "^4.4.2",
+    "postcss-custom-properties": "^9.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.10.1",
+    "react": "^16.12.0",
+    "react-collapse": "^5.0.1",
+    "react-cookie-consent": "^3.0.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "react-select": "^3.0.8",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1",
+    "tailwind.macro": "^1.0.0-alpha.10",
+    "tailwindcss": "^1.1.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby clean && gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Matthaios/starter"
+  }
+}

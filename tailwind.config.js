@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   theme: {
@@ -7,7 +7,7 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px"
+      xl: "1280px",
     },
     fontFamily: {
       raleway: [
@@ -24,7 +24,7 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"'
+        '"Noto Color Emoji"',
       ],
       titillium: [
         "Titillium Web",
@@ -40,7 +40,7 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"'
+        '"Noto Color Emoji"',
       ],
       work: [
         '"Work Sans"',
@@ -56,8 +56,8 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"'
-      ]
+        '"Noto Color Emoji"',
+      ],
     },
     extend: {
       colors: {
@@ -68,17 +68,17 @@ module.exports = {
           black: "#161616",
           dark: "#252525",
           "gray-bg": "#eaeaea",
-          "gray-light": "#7d7d7d"
-        }
-      }
-    }
+          "gray-light": "#7d7d7d",
+        },
+      },
+    },
   },
   variants: {
     borderWidth: ["responsive", "first", "last", "hover", "focus"],
-    display: ["responsive", "hover", "group-hover"]
+    display: ["responsive", "hover", "group-hover"],
   },
-  plugins: []
-};
+  plugins: [],
+}
 
 // module.exports = {
 //   prefix: "",

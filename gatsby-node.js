@@ -5,11 +5,11 @@
  */
 
 // You can delete this file if you're not using it
-const path = require(`path`);
+const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const template = path.resolve("./src/templates/page.js");
+  const { createPage } = actions
+  const template = path.resolve("./src/templates/page.js")
   const { data } = await graphql(
     `
       {
@@ -26,14 +26,14 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `
-  );
+  )
   data.allContentfulPage.nodes.forEach(node => {
     createPage({
       path: node.slug == "/" ? "/" : `/${node.slug}/`.replace("//", "/"),
       component: template,
       context: {
-        contentful_id: node.contentful_id
-      }
-    });
-  });
-};
+        contentful_id: node.contentful_id,
+      },
+    })
+  })
+}

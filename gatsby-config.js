@@ -30,6 +30,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-158667528-1",
+        head: false,
+        respectDNT: false,
+        // cookieDomain: "compareguarantorloans.co.uk",
+      },
+    },
+    {
       resolve: "gatsby-alias-imports",
       options: {
         aliases: {
@@ -74,15 +83,7 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-TJR229D",
-
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
+        includeInDevelopment: true,
       },
     },
     // `gatsby-transformer-sharp`,

@@ -1,9 +1,28 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/Layout"
 import css from "@emotion/css"
 import tw from "tailwind.macro"
+
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 export default function Apply() {
+  useEffect(() => {
+    function trackExitLink(event) {
+      if (event.target.className == "ccAppResults--result--button") {
+        event.preventDefault()
+        trackCustomEvent({
+          category: "Form",
+          action: "Redirect",
+          label: event.target.href,
+        })
+        window.open(event.target.href, "_blank")
+      }
+    }
+    document.addEventListener("click", trackExitLink, false)
+    return () => {
+      document.removeEventListener("click", trackExitLink, false)
+    }
+  }, [])
   return (
     <Layout formPage>
       <div className="container   flex-grow flex items-center">

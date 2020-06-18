@@ -7,7 +7,12 @@ import ValueExplainer from "@components/ValueExplainer"
 import CommonQuestions from "@components/CommonQuestions"
 import ContentComponent from "@components/Content"
 
-export default function Page({ data: { heroData, VE, QA, Content } }) {
+export default function Page({
+  pageContext,
+  data: { heroData, VE, QA, Content },
+}) {
+  console.log(pageContext)
+
   return (
     <Layout>
       {heroData.hasAHeroBanner && <Hero data={heroData}></Hero>}
@@ -30,7 +35,7 @@ export const query = graphql`
       hasAHeroBanner
       heroBannerImage {
         fluid(quality: 100, maxWidth: 2200) {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_withWebp
         }
       }
       mainHeadline

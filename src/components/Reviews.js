@@ -16,7 +16,7 @@ export default function Reviews() {
           }
         `}
       >
-        Our customers say <strong>Excellant</strong>
+        Our customers say <strong>Excellent</strong>
         <div
           className="inline-flex relative items-cente mx-2"
           css={css`

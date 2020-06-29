@@ -90,13 +90,12 @@ function Links({ menu }) {
             {" "}
             {menu &&
               menu.nodes
-                .filter(i => i.isThisAGuide)
-                .map(item => {
+                .filter((i) => i.isThisAGuide)
+                .map((item) => {
                   return (
-                    <li className="py-2">
+                    <li key={item.slug} className="py-2">
                       <Link
                         className=" mr-6 lg:mr-0 tracking-wide hover:text-brand-orange"
-                        key={item.slug}
                         to={
                           item.slug == "/"
                             ? "/"
@@ -113,13 +112,12 @@ function Links({ menu }) {
       </li>
       {menu &&
         menu.nodes
-          .filter(i => !i.isThisAGuide)
-          .map(item => {
+          .filter((i) => !i.isThisAGuide)
+          .map((item) => {
             return (
-              <li className="py-2">
+              <li key={item.slug} className="py-2">
                 <Link
                   className="uppercase mr-6  tracking-wide hover:text-brand-orange"
-                  key={item.slug}
                   to={
                     item.slug == "/" ? "/" : `/${item.slug}/`.replace("//", "/")
                   }

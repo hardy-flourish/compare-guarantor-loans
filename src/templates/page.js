@@ -6,13 +6,12 @@ import Hero from "@components/Hero"
 import ValueExplainer from "@components/ValueExplainer"
 import CommonQuestions from "@components/CommonQuestions"
 import ContentComponent from "@components/Content"
+import ContactForm from "../components/ContactForm"
 
 export default function Page({
   pageContext,
   data: { heroData, VE, QA, Content },
 }) {
-  console.log(pageContext)
-
   return (
     <Layout>
       {heroData.hasAHeroBanner && <Hero data={heroData}></Hero>}
@@ -20,6 +19,7 @@ export default function Page({
       {QA.commonQuestions && (
         <CommonQuestions data={QA.commonQuestions}></CommonQuestions>
       )}
+      {Content.slug && Content.slug == "contact" && <ContactForm />}
       {Content.main.md.html.length > 0 && (
         <ContentComponent data={Content}></ContentComponent>
       )}
@@ -67,6 +67,7 @@ export const query = graphql`
       node_locale: { eq: "en-US" }
       contentful_id: { eq: $contentful_id }
     ) {
+      slug
       main: mainContentSection {
         md: childMarkdownRemark {
           html

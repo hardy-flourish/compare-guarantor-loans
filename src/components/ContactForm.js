@@ -79,12 +79,18 @@ export default function ContactForm() {
             <p>{success}</p>
           </div>
         ) : (
-          <form name="contact" onSubmit={handleSubmit} data-netlify="true">
+          <form
+            name="contact"
+            onSubmit={handleSubmit}
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+          >
             <input type="hidden" name="form-name" value="contact" />
             <div className="row lg:w-1/2">
               <div className="col w-full lg:w-1/2">
                 <input
                   id="name"
+                  name="name"
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.name}
@@ -98,6 +104,7 @@ export default function ContactForm() {
               <div className="col w-full lg:w-1/2">
                 <input
                   id="email"
+                  name="email"
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.email}
@@ -111,6 +118,7 @@ export default function ContactForm() {
               <div className="col w-full">
                 <textarea
                   id="message"
+                  name="message"
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.message}

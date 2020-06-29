@@ -79,7 +79,7 @@ export default function ContactForm() {
             <p>{success}</p>
           </div>
         ) : (
-          <form name="contact" onSubmit={handleSubmit}>
+          <form name="contact" onSubmit={handleSubmit} data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <div className="row lg:w-1/2">
               <div className="col w-full lg:w-1/2">

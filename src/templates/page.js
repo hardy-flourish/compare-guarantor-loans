@@ -19,7 +19,6 @@ export default function Page({
       {QA.commonQuestions && (
         <CommonQuestions data={QA.commonQuestions}></CommonQuestions>
       )}
-      {Content.slug && Content.slug == "contact" && <ContactForm />}
       {Content.main.md.html.length > 0 && (
         <ContentComponent data={Content}></ContentComponent>
       )}

@@ -23,6 +23,7 @@ export default function Page({
       {Content.main.md.html.length > 0 && (
         <ContentComponent data={Content}></ContentComponent>
       )}
+      {Content.slug && Content.slug == "contact" && <ContactForm />}
     </Layout>
   )
 }
